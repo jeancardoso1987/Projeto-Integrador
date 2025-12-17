@@ -1,0 +1,118 @@
+DROP DATABASE IF EXISTS ragnarok;
+CREATE DATABASE ragnarok CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE ragnarok;
+
+
+CREATE TABLE servidores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
+INSERT INTO servidores (nome) VALUES
+('BRO Thor'),
+('BRO Valhalla'),
+('LATAM'),
+('LANDVERSE');
+
+
+CREATE TABLE mvps (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    servidor_id INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    mapa VARCHAR(100) NOT NULL,
+    tempo_respawn INT NOT NULL,
+    imagem VARCHAR(255) DEFAULT 'default.png',
+    FOREIGN KEY (servidor_id) REFERENCES servidores(id)
+);
+
+
+INSERT INTO mvps (servidor_id, nome, mapa, tempo_respawn, imagem) VALUES
+(1, 'Abelha Rainha', 'mjolnir_04', 120, 'AbelhaRainha.png'),
+(1, 'Amon-Ra', 'moc_pryd06', 60, 'AmonRa.png'),
+(1, 'Atroce', 'ra_fild03', 180, 'Atroce.png'),
+(1, 'Bafomé', 'prt_maze03', 120, 'Bafome.png'),
+(1, 'Boitatá', 'bra_dun02', 120, 'Boitata.png'),
+(1, 'Cavaleiro da Tempestade', 'xmas_dun02', 120, 'CavaleiroTempestade.png'),
+(1, 'Detardeurus', 'abyss_03', 180, 'Detardeurus.png'),
+(1, 'Drácula', 'gef_dun01', 60, 'Dracula.png'),
+(1, 'Eddga', 'pay_fild10', 120, 'Eddga.png'),
+(1, 'Freeoni', 'moc_fild17', 120, 'Freeoni.png'),
+(1, 'Gorynych', 'mosk_dun03', 120, 'Gorynych.png'),
+(1, 'Ifrit', 'thor_v3', 120, 'Ifrit.png'),
+(1, 'Kiel', 'kh_dun02', 120, 'Kiel.png'),
+(1, 'Lady Branca', 'lou_dun03', 116, 'LadyBranca.png'),
+(1, 'Orc Herói', 'gef_fild03', 60, 'OrcHeroi.png'),
+(1, 'Pesar Noturno', 'ra_san05', 60, 'PesarNoturno.png'),
+(1, 'Senhor das Trevas', 'gl_chyard', 60, 'SenhordasTrevas.png'),
+(1, 'Tao Gunka', 'beach_dun', 300, 'TaoGunka.png'),
+(1, 'Rainha Scaraba', 'gl_chyard', 60, 'RainhaScaraba.png'),
+(1, 'Vesper', 'jupe_core', 120, 'Vesper.png');
+
+
+INSERT INTO mvps (servidor_id, nome, mapa, tempo_respawn, imagem) VALUES
+(2, 'Abelha Rainha', 'mjolnir_04', 120, 'AbelhaRainha.png'),
+(2, 'Amon-Ra', 'moc_pryd06', 60, 'AmonRa.png'),
+(2, 'Atroce', 'ra_fild03', 180, 'Atroce.png'),
+(2, 'Bafomé', 'prt_maze03', 120, 'Bafome.png'),
+(2, 'Boitatá', 'bra_dun02', 120, 'Boitata.png'),
+(2, 'Cavaleiro da Tempestade', 'xmas_dun02', 120, 'CavaleiroTempestade.png'),
+(2, 'Detardeurus', 'abyss_03', 180, 'Detardeurus.png'),
+(2, 'Drácula', 'gef_dun01', 60, 'Dracula.png'),
+(2, 'Eddga', 'pay_fild10', 120, 'Eddga.png'),
+(2, 'Freeoni', 'moc_fild17', 120, 'Freeoni.png'),
+(2, 'Gorynych', 'mosk_dun03', 120, 'Gorynych.png'),
+(2, 'Ifrit', 'thor_v3', 120, 'Ifrit.png'),
+(2, 'Kiel', 'kh_dun02', 120, 'Kiel.png'),
+(2, 'Lady Branca', 'lou_dun03', 116, 'LadyBranca.png'),
+(2, 'Orc Herói', 'gef_fild03', 60, 'OrcHeroi.png'),
+(2, 'Pesar Noturno', 'ra_san05', 60, 'PesarNoturno.png'),
+(2, 'Senhor das Trevas', 'gl_chyard', 60, 'SenhordasTrevas.png'),
+(2, 'Tao Gunka', 'beach_dun', 300, 'TaoGunka.png'),
+(2, 'Rainha Scaraba', 'gl_chyard', 60, 'RainhaScaraba.png'),
+(2, 'Vesper', 'jupe_core', 120, 'Vesper.png');
+
+
+INSERT INTO mvps (servidor_id, nome, mapa, tempo_respawn, imagem) VALUES
+(3, 'Abelha Rainha', 'mjolnir_04', 120, 'AbelhaRainha.png'),
+(3, 'Amon-Ra', 'moc_pryd06', 60, 'AmonRa.png'),
+(3, 'Atroce', 'ra_fild03', 180, 'Atroce.png'),
+(3, 'Bafomé', 'prt_maze03', 120, 'Bafome.png'),
+(3, 'Boitatá', 'bra_dun02', 120, 'Boitata.png'),
+(3, 'Cavaleiro da Tempestade', 'xmas_dun02', 120, 'CavaleiroTempestade.png'),
+(3, 'Detardeurus', 'abyss_03', 180, 'Detardeurus.png'),
+(3, 'Drácula', 'gef_dun01', 60, 'Dracula.png'),
+(3, 'Eddga', 'pay_fild10', 120, 'Eddga.png'),
+(3, 'Freeoni', 'moc_fild17', 120, 'Freeoni.png'),
+(3, 'Gorynych', 'mosk_dun03', 120, 'Gorynych.png'),
+(3, 'Ifrit', 'thor_v3', 120, 'Ifrit.png'),
+(3, 'Kiel', 'kh_dun02', 120, 'Kiel.png'),
+(3, 'Lady Branca', 'lou_dun03', 116, 'LadyBranca.png'),
+(3, 'Orc Herói', 'gef_fild03', 60, 'OrcHeroi.png'),
+(3, 'Pesar Noturno', 'ra_san05', 60, 'PesarNoturno.png'),
+(3, 'Senhor das Trevas', 'gl_chyard', 60, 'SenhordasTrevas.png'),
+(3, 'Tao Gunka', 'beach_dun', 300, 'TaoGunka.png'),
+(3, 'Rainha Scaraba', 'gl_chyard', 60, 'RainhaScaraba.png'),
+(3, 'Vesper', 'jupe_core', 120, 'Vesper.png');
+
+
+INSERT INTO mvps (servidor_id, nome, mapa, tempo_respawn, imagem) VALUES
+(4, 'Abelha Rainha', 'mjolnir_04', 120, 'AbelhaRainha.png'),
+(4, 'Amon-Ra', 'moc_pryd06', 60, 'AmonRa.png'),
+(4, 'Atroce', 'ra_fild03', 180, 'Atroce.png'),
+(4, 'Bafomé', 'prt_maze03', 120, 'Bafome.png'),
+(4, 'Boitatá', 'bra_dun02', 120, 'Boitata.png'),
+(4, 'Cavaleiro da Tempestade', 'xmas_dun02', 120, 'CavaleiroTempestade.png'),
+(4, 'Detardeurus', 'abyss_03', 180, 'Detardeurus.png'),
+(4, 'Drácula', 'gef_dun01', 60, 'Dracula.png'),
+(4, 'Eddga', 'pay_fild10', 120, 'Eddga.png'),
+(4, 'Freeoni', 'moc_fild17', 120, 'Freeoni.png'),
+(4, 'Gorynych', 'mosk_dun03', 120, 'Gorynych.png'),
+(4, 'Ifrit', 'thor_v3', 120, 'Ifrit.png'),
+(4, 'Kiel', 'kh_dun02', 120, 'Kiel.png'),
+(4, 'Lady Branca', 'lou_dun03', 116, 'LadyBranca.png'),
+(4, 'Orc Herói', 'gef_fild03', 60, 'OrcHeroi.png'),
+(4, 'Pesar Noturno', 'ra_san05', 60, 'PesarNoturno.png'),
+(4, 'Senhor das Trevas', 'gl_chyard', 60, 'SenhordasTrevas.png'),
+(4, 'Tao Gunka', 'beach_dun', 300, 'TaoGunka.png'),
+(4, 'Rainha Scaraba', 'gl_chyard', 60, 'RainhaScaraba.png'),
+(4, 'Vesper', 'jupe_core', 120, 'Vesper.png');
