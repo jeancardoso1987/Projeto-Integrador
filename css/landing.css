@@ -1,0 +1,112 @@
+body.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.lp-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.lp-brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.lp-brand img { width: 38px; height: 38px; }
+.lp-brand .wm {
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 700; font-size: 1.25rem; letter-spacing: .04em; color: var(--accent);
+}
+.lp-brand .wm .t2 { color: var(--text); }
+.lp-nav-links { display: flex; align-items: center; gap: 1.5rem; }
+.lp-nav-links a { color: var(--text2); text-decoration: none; font-size: .9rem; transition: color .15s; }
+.lp-nav-links a:hover { color: var(--text); }
+.lp-nav-links a.lp-entrar { color: var(--accent); font-weight: 600; }
+
+.lp-hero {
+    flex: 1;
+    text-align: center;
+    padding: 4.5rem 1.5rem 3rem;
+    background: radial-gradient(ellipse at 50% 0%, #20243a 0%, var(--bg) 62%);
+    position: relative;
+    overflow: hidden;
+}
+.lp-hero::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(circle at 80% 15%, rgba(232,160,32,.12), transparent 45%),
+               radial-gradient(circle at 15% 85%, rgba(192,80,26,.10), transparent 45%);
+}
+.lp-hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+.lp-emblem { width: 92px; height: 92px; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 18px rgba(232,160,32,.25)); }
+.lp-hero h1 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 700; font-size: 2.9rem; line-height: 1.12; letter-spacing: .01em;
+    margin-bottom: 1.1rem;
+}
+.lp-hero h1 .accent { color: var(--accent); }
+.lp-hero p.sub {
+    font-size: 1.05rem; color: var(--text2); line-height: 1.7;
+    max-width: 52ch; margin: 0 auto 2rem;
+}
+.lp-cta { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
+.lp-btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    border: none; cursor: pointer; border-radius: 8px;
+    font-size: 1rem; font-weight: 600; text-decoration: none;
+    padding: .75rem 1.5rem; transition: filter .15s, border-color .15s, color .15s;
+}
+.lp-btn-primary { background: var(--accent); color: #000; }
+.lp-btn-primary:hover { filter: brightness(1.1); }
+.lp-btn-ghost { background: var(--bg3); color: var(--text); border: 1px solid var(--border); }
+.lp-btn-ghost:hover { border-color: var(--accent); }
+.lp-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.lp-features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem; max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem;
+}
+.lp-feature {
+    background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.6rem 1.4rem; text-align: center;
+}
+.lp-feature .ico-wrap {
+    width: 52px; height: 52px; margin: 0 auto 1rem; border-radius: 12px;
+    background: var(--bg3); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center; color: var(--accent);
+}
+.lp-feature .ico-wrap svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lp-feature h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: .5rem; color: var(--text); }
+.lp-feature p { font-size: .9rem; color: var(--text2); line-height: 1.6; }
+
+.lp-preview {
+    max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: .8rem;
+}
+.lp-mvp {
+    background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
+    padding: .8rem 1rem; display: flex; align-items: center; gap: .8rem;
+}
+.lp-mvp .thumb {
+    width: 46px; height: 46px; border-radius: 8px; flex-shrink: 0;
+    background: var(--bg2); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center; color: var(--accent);
+}
+.lp-mvp .thumb svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lp-mvp strong { display: block; font-size: .95rem; }
+.lp-mvp small { font-size: .8rem; color: var(--text2); }
+.lp-mvp .timer { margin-left: auto; font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+.lp-mvp .timer.spawn { color: var(--success); }
+
+.lp-footer {
+    text-align: center; padding: 1.6rem; border-top: 1px solid var(--border);
+    color: var(--text2); font-size: .82rem;
+}
+
+@media (max-width: 560px) {
+    .lp-hero h1 { font-size: 2.1rem; }
+    .lp-preview { grid-template-columns: 1fr; }
+    .lp-nav-links a:not(.lp-entrar) { display: none; }
+}

@@ -1,0 +1,64 @@
+.form-grid-srv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+.campo-lg { grid-column: span 2; }
+
+.srv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: .85rem;
+    margin-top: .75rem;
+}
+
+.srv-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    transition: border-color .15s;
+}
+.srv-card:hover   { border-color: var(--accent); }
+.srv-card.inativo { opacity: .45; }
+
+.srv-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.srv-nome { display: block; font-size: .95rem; font-weight: 600; }
+
+.srv-desc  { font-size: .8rem; color: var(--text2); margin: 0; }
+.srv-stats { font-size: .78rem; color: var(--text2); }
+
+.srv-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .25rem;
+    padding-top: .5rem;
+    border-top: 1px solid var(--border);
+}
+
+.srv-acoes { display: flex; gap: .35rem; }
+.srv-acoes .btn-sm { text-decoration: none; display: inline-block; text-align: center; }
+
+.badge-tipo {
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .1rem .45rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-left: .4rem;
+    vertical-align: middle;
+}
+.badge-tipo-low    { background: #0d2e1a; color: #5df5a0; }
+.badge-tipo-mid    { background: #1a2a40; color: #6db3f2; }
+.badge-tipo-high   { background: #2e1a00; color: var(--accent); }
+.badge-tipo-custom { background: #2a1a2e; color: #c87df5; }

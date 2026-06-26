@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="MVP Timer">
+  <defs>
+    <linearGradient id="lgBezel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8a020"/><stop offset="1" stop-color="#c0501a"/>
+    </linearGradient>
+    <linearGradient id="lgBlade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f6ff"/><stop offset="1" stop-color="#9aa3bd"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="#1e2130" stroke="url(#lgBezel)" stroke-width="3"/>
+  <g stroke="#e8a020" stroke-width="2.4" stroke-linecap="round">
+    <line x1="60" y1="15" x2="60" y2="23"/><line x1="60" y1="97" x2="60" y2="105"/>
+    <line x1="15" y1="60" x2="23" y2="60"/><line x1="97" y1="60" x2="105" y2="60"/>
+  </g>
+  <g stroke="#8891aa" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+    <line x1="82.5" y1="22.6" x2="78.7" y2="29.2"/><line x1="41.3" y1="90.8" x2="37.5" y2="97.4"/>
+    <line x1="97.4" y1="82.5" x2="90.8" y2="78.7"/><line x1="29.2" y1="41.3" x2="22.6" y2="37.5"/>
+    <line x1="97.4" y1="37.5" x2="90.8" y2="41.3"/><line x1="29.2" y1="78.7" x2="22.6" y2="82.5"/>
+    <line x1="82.5" y1="97.4" x2="78.7" y2="90.8"/><line x1="41.3" y1="29.2" x2="37.5" y2="22.6"/>
+  </g>
+  <polygon points="60,30 56,76 64,76" fill="url(#lgBlade)" stroke="#c0501a" stroke-width="1"/>
+  <rect x="46" y="76" width="28" height="6" rx="2" fill="#e8a020"/>
+  <rect x="57" y="82" width="6" height="13" rx="1.5" fill="#9aa3bd"/>
+  <circle cx="60" cy="97" r="4.2" fill="#e8a020"/>
+</svg>
